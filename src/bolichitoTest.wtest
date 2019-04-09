@@ -9,6 +9,14 @@ test "El bolichito es brillante si tiene un muñeco y una placa" {
 	assert.that(bolichito.esBrillante())
 }
 
+test "el material de la pelota no brilla" {
+	assert.notThat(pelota.material().brilla())
+}
+
+test "el material de la placa brilla" {
+	assert.that(placa.material().brilla())
+}
+
 test "El bolichito no es brillante si tiene una pelota y una placa" {
 	bolichito.ponerEnMostrador(pelota)
 	bolichito.ponerEnVidriera(placa)
